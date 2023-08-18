@@ -1,4 +1,3 @@
-```markdown
 # bs4tools
 
 `bs4tools` is a collection of utilities designed to assist developers in working with web scraping and HTML parsing using BeautifulSoup 4 (BS4). These tools aim to provide efficient, robust, and maintainable solutions for various web scraping tasks.
