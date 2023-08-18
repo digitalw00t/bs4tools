@@ -3,6 +3,8 @@
 # author: Draeician 2023-08-17
 # Purpose: Download web pages for offline development
 
+__VERSION__ = "v0.1.0"
+
 from bs4 import BeautifulSoup
 import requests
 import argparse

@@ -75,7 +75,7 @@ python3 datascraper.py <URL> [--tag TAG] [--attrs ATTRS] [--output-format FORMAT
 
 #### Purpose
 
-`contentextractor.py` is a command-line utility for extracting specific content from HTML files. It enables users to explore HTML structure and identify correct tags, classes, and attributes for BeautifulSoup 4 applications.
+`contentextractor.py` is a command-line utility for extracting specific content from HTML files or URLs. It enables users to explore HTML structure and identify correct tags, classes, and attributes for BeautifulSoup 4 applications.
 
 #### Features
 
@@ -83,25 +83,36 @@ python3 datascraper.py <URL> [--tag TAG] [--attrs ATTRS] [--output-format FORMAT
 - **Batch Extraction**: Extract specific content based on user-defined parameters.
 - **Preview Mode**: Preview targeted content.
 - **Export Options**: Supports text format.
+- **URL Support**: Extract content directly from a URL.
 
 #### Usage
 
 ##### Interactive Mode
 
 ```bash
-python3 contentextractor.py <HTML_FILE> --interactive
+python3 contentextractor.py --file <HTML_FILE> --interactive
+python3 contentextractor.py --url <URL> --interactive
 ```
 
 ##### Batch Extraction
 
 ```bash
-python3 contentextractor.py <HTML_FILE> --tag TAG [--attrs ATTRS] [--preview] [--export FORMAT]
+python3 contentextractor.py --file <HTML_FILE> --tag TAG [--attrs ATTRS] [--preview] [--export FORMAT]
+python3 contentextractor.py --url <URL> --tag TAG [--attrs ATTRS] [--preview] [--export FORMAT]
+```
+
+##### Search String within HTML Content
+
+```bash
+python3 contentextractor.py --file <HTML_FILE> --search "your_search_text"
+python3 contentextractor.py --url <URL> --search "your_search_text"
 ```
 
 #### Requirements
 
 - Python 3
 - BeautifulSoup 4
+- requests (for URL support)
 
 ## Future Tools
 
@@ -127,6 +138,3 @@ MIT License
 Draeician, 2023
 
 ---
-
-Designed with ❤️ for developers working with web scraping.
-```
